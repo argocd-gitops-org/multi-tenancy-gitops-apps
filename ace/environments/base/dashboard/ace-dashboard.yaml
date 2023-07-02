@@ -9,6 +9,25 @@ spec:
     use: CloudPakForIntegrationNonProduction
   useCommonServices: true
   version: 12.0.1.0-r3
-  storage:
-    type: ephemeral
   replicas: 1
+  storage:
+    type: persistent-claim
+    size: 5Gi
+  pod:
+    containers:
+      content-server:
+        resources:
+          requests:
+            cpu: 50m
+            memory: 50Mi
+          limits:
+            cpu: 1
+            memory: 512Mi
+      control-ui:
+        resources:
+          requests:
+            cpu: 50m
+            memory: 125Mi
+          limits:
+            cpu: 1
+            memory: 512Mi
