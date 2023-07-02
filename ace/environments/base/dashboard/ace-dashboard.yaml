@@ -13,6 +13,7 @@ spec:
   storage:
     type: persistent-claim
     size: 5Gi
+    class: ocs-storagecluster-cephfs
   pod:
     containers:
       content-server:
