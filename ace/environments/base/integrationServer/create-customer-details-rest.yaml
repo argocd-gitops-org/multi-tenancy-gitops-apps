@@ -6,7 +6,7 @@ spec:
   designerFlowsOperationMode: disabled
   license:
     accept: true
-    license:  L-APEH-C9NCK6
+    license: L-APEH-C9NCK6
     use: CloudPakForIntegrationNonProduction
   replicas: 1
   router:
@@ -14,12 +14,12 @@ spec:
   service:
     endpointType: http
   useCommonServices: true
-  version: '12.0.4.0-r2'
+  version: 12.0.4.0-r2
   adminServerSecure: true
   pod:
     containers:
       runtime:
-        image: image-registry.openshift-image-registry.svc:5000/ci/create-customer-details-rest:a10cf5046d69fda3662332a88ca20eacd9c0d2c9
+        image: image-registry.openshift-image-registry.svc:5000/ci/create-customer-details-rest:2b200745ff0e2507e69ac4b87b143e27ce01e0eb
         imagePullPolicy: Always
   configurations:
     - create-customer-serverconf.yaml
